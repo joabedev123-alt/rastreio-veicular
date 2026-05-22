@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   keywords:
     "rastreamento veicular, rastreador, monitoramento 24h, bloqueio remoto, recuperação veicular, Maranhão, Piauí",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/logo.png",
   },
   openGraph: {
     title: "Rastreio Veicular | Proteção Inteligente 24h",

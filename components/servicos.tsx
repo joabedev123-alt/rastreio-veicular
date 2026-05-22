@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { MapPin, Power, Eye, Search } from "lucide-react";
+import { MapPin, Power, Eye, Search, Play, Pause, Volume2, VolumeX } from "lucide-react";
 import Image from "next/image";
 
 const WA_LINK = "https://wa.me/5586988615309";
@@ -13,7 +13,7 @@ const servicos = [
     title: "Rastreamento Veicular",
     desc: "Localização precisa via GPS com atualização em tempo real. Monitore a posição, rota e histórico de deslocamentos do seu veículo de qualquer lugar.",
     features: ["GPS em tempo real", "Histórico de rotas", "App mobile", "Alertas de rota"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "/rastreio8.jpeg",
     delay: 0,
   },
   {
@@ -21,7 +21,7 @@ const servicos = [
     title: "Bloqueio Remoto",
     desc: "Em caso de roubo ou furto, bloqueie o motor do veículo remotamente com um toque. Controle total na palma da sua mão.",
     features: ["Bloqueio instantâneo", "Desbloqueio remoto", "Log de ações", "Segurança anti-hack"],
-    image: "https://images.unsplash.com/photo-1547447134-cd3f5c716030?w=800&q=80",
+    image: "/rastreio1.jpeg",
     delay: 0.15,
   },
   {
@@ -29,7 +29,8 @@ const servicos = [
     title: "Monitoramento 24h",
     desc: "Central de monitoramento operando 24 horas por dia, 7 dias por semana. Nossa equipe especializada cuida do seu patrimônio enquanto você dorme.",
     features: ["Central 24/7", "Alertas automáticos", "Equipe especializada", "Relatórios diários"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    image: "", // Not used since video is present
+    video: "/maruicliente.mp4",
     delay: 0.3,
   },
   {
@@ -37,7 +38,8 @@ const servicos = [
     title: "Recuperação de Veículos",
     desc: "Acionamento imediato junto às autoridades e nossa equipe de campo para localização e recuperação do seu veículo com máxima agilidade.",
     features: ["Acionamento imediato", "Parceria policial", "Taxa 98% recuperação", "Sem burocracia"],
-    image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=80",
+    image: "", // Not used since video is present
+    video: "/maruireboque.mp4",
     delay: 0.45,
   },
 ];
@@ -50,8 +52,31 @@ function ServicoCard({
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
   const isEven = index % 2 === 0;
+
+  const togglePlay = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <motion.div
@@ -69,13 +94,44 @@ function ServicoCard({
           isEven ? "" : "lg:col-start-2"
         }`}
       >
-        <Image
-          src={servico.image}
-          alt={servico.title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
+        {(servico as any).video ? (
+          <>
+            <video
+              ref={videoRef}
+              src={(servico as any).video}
+              className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+              autoPlay
+              loop
+              muted={isMuted}
+              playsInline
+            />
+            {/* Custom Video Controls */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
+              <button
+                onClick={togglePlay}
+                className="w-10 h-10 rounded-full glass-dark border border-[#00FF88]/30 flex items-center justify-center text-[#00FF88] hover:bg-[#00FF88]/20 hover:scale-110 transition-all cursor-pointer"
+                aria-label={isPlaying ? "Pausar" : "Tocar"}
+              >
+                {isPlaying ? <Pause size={18} /> : <Play size={18} className="ml-1" />}
+              </button>
+              <button
+                onClick={toggleMute}
+                className="w-10 h-10 rounded-full glass-dark border border-[#00FF88]/30 flex items-center justify-center text-[#00FF88] hover:bg-[#00FF88]/20 hover:scale-110 transition-all cursor-pointer"
+                aria-label={isMuted ? "Ativar som" : "Desativar som"}
+              >
+                {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+              </button>
+            </div>
+          </>
+        ) : (
+          <Image
+            src={servico.image}
+            alt={servico.title}
+            fill
+            className="object-contain transition-transform duration-700 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        )}
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#00FF88]/5 to-transparent" />

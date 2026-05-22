@@ -4,6 +4,22 @@ import { Shield, Phone, MapPin, Share2, MessageCircle } from "lucide-react";
 
 const WA_LINK = "https://wa.me/5586988615309";
 
+const InstagramIcon = (props: any) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -19,9 +35,11 @@ export function Footer() {
             {/* Brand */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-[#00FF88]/10 border border-[#00FF88]/30 flex items-center justify-center">
-                  <Shield className="text-[#00FF88]" size={20} strokeWidth={1.5} />
-                </div>
+                <img 
+                  src="/logo.png" 
+                  alt="Marauí Logo" 
+                  className="w-12 h-12 object-contain"
+                />
                 <div>
                   <span
                     className="text-[#00FF88] text-xl font-black tracking-widest block"
@@ -42,6 +60,7 @@ export function Footer() {
               <div className="flex gap-3">
                 {[
                   { icon: MessageCircle, href: WA_LINK, label: "WhatsApp" },
+                  { icon: InstagramIcon, href: "https://www.instagram.com/marauirastreamento?igsh=MXd6d2ZrYWpwdnduYQ==", label: "Instagram" },
                   { icon: Share2, href: "#", label: "Redes Sociais" },
                 ].map(({ icon: Icon, href, label }) => (
                   <a

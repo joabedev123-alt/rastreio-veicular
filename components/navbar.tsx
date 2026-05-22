@@ -38,15 +38,11 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 flex items-center justify-center">
-              <div className="absolute inset-0 rounded-xl bg-[#00FF88]/10 group-hover:bg-[#00FF88]/20 transition-colors" />
-              <div className="absolute inset-0 rounded-xl border border-[#00FF88]/30 group-hover:border-[#00FF88]/60 transition-colors" />
-              <Shield
-                className="relative z-10 text-[#00FF88]"
-                size={20}
-                strokeWidth={1.5}
-              />
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Marauí Logo" 
+              className="w-12 h-12 object-contain"
+            />
             <div className="flex flex-col">
               <span
                 className="text-[#00FF88] text-lg leading-none tracking-widest font-black"
