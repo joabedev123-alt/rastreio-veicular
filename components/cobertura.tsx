@@ -24,7 +24,7 @@ export function Cobertura() {
   return (
     <section
       id="cobertura"
-      className="relative py-24 px-6 overflow-hidden"
+      className="relative py-16 px-6 overflow-hidden"
       style={{
         background:
           "linear-gradient(180deg, #050505 0%, #020A05 50%, #050505 100%)",

@@ -162,7 +162,7 @@ export function Diferenciais() {
   return (
     <section
       id="diferenciais"
-      className="relative py-24 px-6 overflow-hidden bg-[#050505]"
+      className="relative py-16 px-6 overflow-hidden bg-[#050505]"
     >
       {/* Background grid */}
       <div

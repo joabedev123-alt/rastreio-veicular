@@ -38,17 +38,17 @@ export function Footer() {
                 <img 
                   src="/logo.png" 
                   alt="Marauí Logo" 
-                  className="w-12 h-12 object-contain"
+                  className="w-24 h-24 object-contain"
                 />
                 <div>
                   <span
-                    className="text-[#00FF88] text-xl font-black tracking-widest block"
+                    className="text-[#00FF88] text-xl font-black tracking-widest block uppercase"
                     style={{ fontFamily: "'Orbitron', sans-serif" }}
                   >
-                    RASTREIO
+                    MARAUÍ
                   </span>
-                  <span className="text-[#EDEDED]/30 text-[9px] tracking-[0.3em]">
-                    VIGILÂNCIA AVANÇADA
+                  <span className="text-[#EDEDED]/30 text-[9px] tracking-[0.3em] uppercase mt-1 inline-block">
+                    RASTREAMENTO
                   </span>
                 </div>
               </div>

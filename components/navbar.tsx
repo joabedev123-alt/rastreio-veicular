@@ -26,13 +26,11 @@ export function Navbar() {
   return (
     <>
       <motion.header
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        initial={{ y: -120, opacity: 0 }}
+        animate={{ y: scrolled ? -120 : 0, opacity: scrolled ? 0 : 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`fixed top-4 left-4 right-4 z-50 rounded-2xl transition-all duration-500 ${
-          scrolled
-            ? "glass-dark shadow-[0_0_40px_rgba(0,255,136,0.08)]"
-            : "bg-transparent"
+          scrolled ? "pointer-events-none" : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -41,17 +39,17 @@ export function Navbar() {
             <img 
               src="/logo.png" 
               alt="Marauí Logo" 
-              className="w-12 h-12 object-contain"
+              className="w-16 h-16 md:w-24 md:h-24 object-contain"
             />
-            <div className="flex flex-col">
+            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
               <span
-                className="text-[#00FF88] text-lg leading-none tracking-widest font-black"
+                className="text-[#00FF88] text-xl leading-none tracking-widest font-black uppercase"
                 style={{ fontFamily: "'Orbitron', sans-serif" }}
               >
-                RASTREIO
+                MARAUÍ
               </span>
-              <span className="text-[#EDEDED]/40 text-[9px] tracking-[0.3em] leading-none">
-                VIGILÂNCIA AVANÇADA
+              <span className="text-[#EDEDED]/70 text-sm tracking-[0.2em] leading-none uppercase">
+                RASTREAMENTO
               </span>
             </div>
           </a>

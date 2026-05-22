@@ -149,15 +149,12 @@ export function Hero() {
                 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black leading-none mb-6 tracking-tight"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
-                <span className="block text-[#EDEDED]">PROTEJA</span>
+                <span className="block text-[#EDEDED]">SEU PATRIMÔNIO</span>
                 <span className="block gradient-text-green text-glow">
-                  SEU VEÍCULO
+                  NOSSA MISSÃO
                 </span>
-                <span className="block text-[#EDEDED]/80 text-5xl sm:text-6xl lg:text-7xl">
-                  COM TECNOLOGIA
-                </span>
-                <span className="block text-[#00FF88] text-4xl sm:text-5xl lg:text-6xl text-glow">
-                  DE RASTREAMENTO 24H
+                <span className="block text-[#00FF88] text-4xl sm:text-5xl lg:text-6xl text-glow mt-4">
+                  RASTREAMENTO 24H
                 </span>
               </h1>
             </motion.div>

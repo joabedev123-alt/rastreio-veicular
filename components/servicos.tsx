@@ -228,7 +228,7 @@ export function Servicos() {
   return (
     <section
       id="servicos"
-      className="relative py-24 px-6 overflow-hidden bg-[#050505]"
+      className="relative py-16 px-6 overflow-hidden bg-[#050505]"
     >
       {/* Subtle side glows */}
       <div className="absolute left-0 top-1/4 w-64 h-64 rounded-full bg-[#00FF88]/03 blur-3xl pointer-events-none" />
@@ -264,7 +264,7 @@ export function Servicos() {
         </motion.div>
 
         {/* Services list */}
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-16">
           {servicos.map((servico, i) => (
             <ServicoCard key={servico.title} servico={servico} index={i} />
           ))}

@@ -85,7 +85,7 @@ export function Faq() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="relative py-24 px-6 overflow-hidden bg-[#050505]">
+    <section className="relative py-16 px-6 overflow-hidden bg-[#050505]">
       <div ref={ref} className="max-w-3xl mx-auto">
         {/* Header */}
         <motion.div
