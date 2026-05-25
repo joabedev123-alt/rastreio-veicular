@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { MapPin, Power, Eye, Search, Play, Pause, Volume2, VolumeX } from "lucide-react";
+import { MapPin, Power, Eye, Search, Play, Pause, Volume2, VolumeX, Truck, Shield } from "lucide-react";
 import Image from "next/image";
 
 const WA_LINK = "https://wa.me/5586988615309";
@@ -11,7 +11,7 @@ const servicos = [
   {
     icon: MapPin,
     title: "Rastreamento Veicular",
-    desc: "Localização precisa via GPS com atualização em tempo real. Monitore a posição, rota e histórico de deslocamentos do seu veículo de qualquer lugar.",
+    desc: "Localização em tempo real e monitoramento 24h para seu veículo.",
     features: ["GPS em tempo real", "Histórico de rotas", "App mobile", "Alertas de rota"],
     image: "/rastreio8.jpeg",
     delay: 0,
@@ -35,12 +35,28 @@ const servicos = [
   },
   {
     icon: Search,
-    title: "Recuperação de Veículos",
-    desc: "Acionamento imediato junto às autoridades e nossa equipe de campo para localização e recuperação do seu veículo com máxima agilidade.",
+    title: "Serviço de Reboque",
+    desc: "Se precisar disponibilizamos Serviço de Reboque também.",
     features: ["Acionamento imediato", "Parceria policial", "Taxa 98% recuperação", "Sem burocracia"],
     image: "", // Not used since video is present
     video: "/maruireboque.mp4",
     delay: 0.45,
+  },
+  {
+    icon: Truck,
+    title: "Frotista",
+    desc: "Controle, gestão e acompanhamento completo para sua frota.",
+    features: ["Gestão inteligente", "Monitoramento em lote", "Relatórios gerenciais", "Otimização de custos"],
+    image: "/rastreio8.jpeg",
+    delay: 0.6,
+  },
+  {
+    icon: Shield,
+    title: "Garantia Veicular",
+    desc: "Mais segurança, proteção e tranquilidade para o cliente.",
+    features: ["Segurança total", "Proteção garantida", "Tranquilidade", "Indenização FIPE"],
+    image: "/rastreio1.jpeg",
+    delay: 0.75,
   },
 ];
 
