@@ -13,7 +13,7 @@ const servicos = [
     title: "Rastreamento Veicular",
     desc: "Localização em tempo real e monitoramento 24h para seu veículo.",
     features: ["GPS em tempo real", "Histórico de rotas", "App mobile", "Alertas de rota"],
-    image: "/rastreio8.jpeg",
+    image: "/rastreamento.jpeg",
     delay: 0,
   },
   {
@@ -100,13 +100,13 @@ function ServicoCard({
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, delay: servico.delay, ease: "easeOut" }}
-      className={`grid lg:grid-cols-2 gap-8 items-center ${
+      className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center ${
         isEven ? "" : "lg:grid-flow-dense"
       }`}
     >
       {/* Image */}
       <div
-        className={`relative rounded-3xl overflow-hidden h-80 lg:h-[420px] group ${
+        className={`relative rounded-3xl overflow-hidden h-56 sm:h-72 md:h-80 lg:h-[420px] group ${
           isEven ? "" : "lg:col-start-2"
         }`}
       >
@@ -203,7 +203,7 @@ function ServicoCard({
         </div>
 
         <h3
-          className="text-4xl sm:text-5xl font-black text-[#EDEDED] mb-4 leading-tight"
+          className="text-3xl sm:text-5xl font-black text-[#EDEDED] mb-4 leading-tight"
           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
         >
           {servico.title}
@@ -244,7 +244,7 @@ export function Servicos() {
   return (
     <section
       id="servicos"
-      className="relative py-16 px-6 overflow-hidden bg-[#050505]"
+      className="relative py-10 sm:py-16 px-4 sm:px-6 overflow-hidden bg-[#050505]"
     >
       {/* Subtle side glows */}
       <div className="absolute left-0 top-1/4 w-64 h-64 rounded-full bg-[#00FF88]/03 blur-3xl pointer-events-none" />
@@ -257,7 +257,7 @@ export function Servicos() {
           initial={{ opacity: 0, y: 30 }}
           animate={titleInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
           <p
             className="text-[#00FF88] text-xs tracking-[0.4em] mb-4"
@@ -266,7 +266,7 @@ export function Servicos() {
             O QUE OFERECEMOS
           </p>
           <h2
-            className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#EDEDED] mb-4"
+            className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#EDEDED] mb-4"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             NOSSOS{" "}
@@ -280,7 +280,7 @@ export function Servicos() {
         </motion.div>
 
         {/* Services list */}
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-10 sm:gap-16">
           {servicos.map((servico, i) => (
             <ServicoCard key={servico.title} servico={servico} index={i} />
           ))}

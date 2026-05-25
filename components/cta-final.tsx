@@ -11,7 +11,7 @@ export function CtaFinal() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative py-28 px-6 overflow-hidden bg-[#050505]">
+    <section className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden bg-[#050505]">
       {/* Background radial */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -78,7 +78,7 @@ export function CtaFinal() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-6xl sm:text-7xl lg:text-9xl font-black leading-none mb-6"
+          className="text-4xl sm:text-6xl lg:text-9xl font-black leading-none mb-6"
           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
         >
           <span className="block text-[#EDEDED]">SEU PATRIMÔNIO</span>

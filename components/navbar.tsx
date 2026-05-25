@@ -39,7 +39,7 @@ export function Navbar() {
             <img 
               src="/logo.png" 
               alt="Marauí Logo" 
-              className="w-16 h-16 md:w-24 md:h-24 object-contain"
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
             />
             <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
               <span

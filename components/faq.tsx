@@ -45,7 +45,7 @@ function FaqItem({ item, index }: { item: (typeof faqs)[0]; index: number }) {
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
+        className="w-full flex items-center justify-between p-4 sm:p-6 text-left cursor-pointer"
         aria-expanded={open}
       >
         <span className="text-[#EDEDED] font-semibold text-sm sm:text-base pr-4 leading-snug">
@@ -85,7 +85,7 @@ export function Faq() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="relative py-16 px-6 overflow-hidden bg-[#050505]">
+    <section className="relative py-10 sm:py-16 px-4 sm:px-6 overflow-hidden bg-[#050505]">
       <div ref={ref} className="max-w-3xl mx-auto">
         {/* Header */}
         <motion.div
@@ -101,7 +101,7 @@ export function Faq() {
             DÚVIDAS FREQUENTES
           </p>
           <h2
-            className="text-5xl sm:text-6xl font-black text-[#EDEDED] mb-4"
+            className="text-4xl sm:text-6xl font-black text-[#EDEDED] mb-4"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             PERGUNTAS{" "}

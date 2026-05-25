@@ -90,7 +90,7 @@ export function LoadingScreen() {
           </motion.div>
 
           {/* Progress bar */}
-          <div className="w-64 h-1 bg-[#111111] rounded-full overflow-hidden mb-3">
+          <div className="w-48 sm:w-64 h-1 bg-[#111111] rounded-full overflow-hidden mb-3">
             <motion.div
               className="h-full rounded-full"
               style={{

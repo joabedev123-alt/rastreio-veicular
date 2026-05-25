@@ -127,7 +127,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-14 sm:pb-20 w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left column */}
           <div className="flex-1 max-w-2xl">
@@ -146,14 +146,14 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1
-                className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black leading-none mb-6 tracking-tight"
+                className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-black leading-none mb-6 tracking-tight"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
                 <span className="block text-[#EDEDED]">SEU PATRIMÔNIO</span>
                 <span className="block gradient-text-green text-glow">
                   NOSSA MISSÃO
                 </span>
-                <span className="block text-[#00FF88] text-4xl sm:text-5xl lg:text-6xl text-glow mt-4">
+                <span className="block text-[#00FF88] text-2xl sm:text-4xl lg:text-6xl text-glow mt-4">
                   RASTREAMENTO 24H
                 </span>
               </h1>
@@ -234,7 +234,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="glass rounded-2xl p-6 border border-[#00FF88]/15"
+              className="glass rounded-2xl p-4 sm:p-6 border border-[#00FF88]/15"
             >
               <p
                 className="text-[#00FF88]/60 text-[10px] tracking-[0.25em] mb-4"
@@ -242,7 +242,7 @@ export function Hero() {
               >
                 DADOS EM TEMPO REAL
               </p>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 <div className="text-center">
                   <p
                     className="text-[#00FF88] text-3xl font-black text-glow"

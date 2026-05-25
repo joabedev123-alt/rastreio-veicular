@@ -162,7 +162,7 @@ export function Diferenciais() {
   return (
     <section
       id="diferenciais"
-      className="relative py-16 px-6 overflow-hidden bg-[#050505]"
+      className="relative py-10 sm:py-16 px-4 sm:px-6 overflow-hidden bg-[#050505]"
     >
       {/* Background grid */}
       <div
@@ -193,7 +193,7 @@ export function Diferenciais() {
             POR QUE ESCOLHER
           </p>
           <h2
-            className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#EDEDED] mb-4"
+            className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#EDEDED] mb-4"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             NOSSOS{" "}

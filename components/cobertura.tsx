@@ -24,7 +24,7 @@ export function Cobertura() {
   return (
     <section
       id="cobertura"
-      className="relative py-16 px-6 overflow-hidden"
+      className="relative py-10 sm:py-16 px-4 sm:px-6 overflow-hidden"
       style={{
         background:
           "linear-gradient(180deg, #050505 0%, #020A05 50%, #050505 100%)",
@@ -55,7 +55,7 @@ export function Cobertura() {
             ÁREA DE ATUAÇÃO
           </p>
           <h2
-            className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#EDEDED] mb-4"
+            className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#EDEDED] mb-4"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             NOSSA{" "}
@@ -72,7 +72,7 @@ export function Cobertura() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Map */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -80,7 +80,7 @@ export function Cobertura() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative h-[460px] glass rounded-3xl border border-[#00FF88]/15 overflow-hidden">
+            <div className="relative h-[280px] sm:h-[380px] lg:h-[460px] glass rounded-3xl border border-[#00FF88]/15 overflow-hidden">
               {/* Grid overlay */}
               <div
                 className="absolute inset-0 opacity-10"
@@ -224,7 +224,7 @@ export function Cobertura() {
             ].map((item) => (
               <div
                 key={item.state}
-                className="glass rounded-2xl p-6 border border-[#00FF88]/15 hover:border-[#00FF88]/30 transition-all duration-300"
+                className="glass rounded-2xl p-4 sm:p-6 border border-[#00FF88]/15 hover:border-[#00FF88]/30 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div
@@ -275,7 +275,7 @@ export function Cobertura() {
             ))}
 
             {/* Signal info */}
-            <div className="glass rounded-2xl p-5 border border-[#00FF88]/15 flex items-center gap-4">
+            <div className="glass rounded-2xl p-4 sm:p-5 border border-[#00FF88]/15 flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#00FF88]/10 border border-[#00FF88]/20 flex items-center justify-center flex-shrink-0">
                 <Wifi className="text-[#00FF88]" size={20} strokeWidth={1.5} />
               </div>
@@ -292,7 +292,7 @@ export function Cobertura() {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-shrink-0 btn-cta px-4 py-2 rounded-lg text-xs font-bold cursor-pointer whitespace-nowrap hidden sm:block"
+                className="flex-shrink-0 btn-cta px-4 py-2 rounded-lg text-xs font-bold cursor-pointer whitespace-nowrap"
               >
                 Consultar
               </a>

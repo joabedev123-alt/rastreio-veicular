@@ -13,7 +13,7 @@ export function Garantia() {
   return (
     <section
       id="garantia"
-      className="relative py-28 px-6 overflow-hidden"
+      className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden"
       style={{
         background:
           "linear-gradient(180deg, #050505 0%, #001A0D 40%, #050505 100%)",
@@ -59,7 +59,7 @@ export function Garantia() {
             SEGURANÇA TOTAL
           </p>
           <h2
-            className="text-5xl sm:text-6xl lg:text-8xl font-black text-[#EDEDED] mb-4 leading-none"
+            className="text-4xl sm:text-6xl lg:text-8xl font-black text-[#EDEDED] mb-4 leading-none"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             NOSSA{" "}
@@ -92,14 +92,14 @@ export function Garantia() {
           </div>
 
           <div
-            className="relative z-10 p-10 sm:p-14"
+            className="relative z-10 p-5 sm:p-10 lg:p-14"
             style={{
               background:
                 "linear-gradient(135deg, rgba(0,59,31,0.3) 0%, rgba(5,5,5,0.8) 60%, rgba(0,20,10,0.4) 100%)",
             }}
           >
             {/* Seal icon */}
-            <div className="flex flex-col lg:flex-row items-center gap-10">
+            <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-10">
               {/* Seal */}
               <motion.div
                 animate={{ rotate: [0, 360] }}
@@ -143,24 +143,14 @@ export function Garantia() {
                   ))}
                 </div>
                 <h3
-                  className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#EDEDED] leading-tight mb-6"
+                  className="text-xl sm:text-3xl lg:text-4xl font-black text-[#EDEDED] leading-tight mb-6"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
-                  SE NÃO LOCALIZARMOS{" "}
-                  <span className="gradient-text-green">
-                    SEU VEÍCULO EM ATÉ 90 DIAS,
-                  </span>{" "}
-                  VOCÊ RECEBE{" "}
-                  <span className="text-[#00FF88] text-glow">
-                    100% DO VALOR DA TABELA FIPE
-                  </span>
-                </h3>
-                <p className="text-[#EDEDED]/50 text-base leading-relaxed max-w-xl">
                   Confiamos tanto na nossa tecnologia que colocamos seu
                   patrimônio em garantia. Indenização de até{" "}
-                  <strong className="text-[#00FF88]">R$ 20.000,00</strong>{" "}
+                  <span className="text-[#00FF88] text-glow">R$ 20.000,00</span>{" "}
                   conforme a Tabela FIPE vigente.
-                </p>
+                </h3>
               </div>
             </div>
 
@@ -191,7 +181,7 @@ export function Garantia() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 btn-cta px-5 py-2.5 rounded-xl text-xs font-bold cursor-pointer whitespace-nowrap hidden sm:block"
+            className="flex-shrink-0 btn-cta px-5 py-2.5 rounded-xl text-xs font-bold cursor-pointer whitespace-nowrap"
           >
             Contratar Agora
           </a>
