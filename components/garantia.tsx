@@ -164,26 +164,7 @@ export function Garantia() {
               </div>
             </div>
 
-            {/* Checklist */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 pt-10 border-t border-[#00FF88]/10">
-              {[
-                "Cobertura total do veículo",
-                "Sem carência para ativação",
-                "Indenização em até 30 dias",
-                "Válido para carros e motos",
-                "Processo 100% digital",
-                "Suporte jurídico incluído",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <CheckCircle
-                    className="text-[#00FF88] flex-shrink-0"
-                    size={16}
-                    strokeWidth={2}
-                  />
-                  <span className="text-[#EDEDED]/70 text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
+
           </div>
         </motion.div>
 
