@@ -179,6 +179,17 @@ export function Footer() {
               VIGILÂNCIA AVANÇADA 24H
             </p>
           </div>
+          {/* Camaly credit */}
+          <div className="pt-4 flex justify-center">
+            <a
+              href="https://camaly.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#EDEDED]/30 text-xs hover:text-[#EDEDED]/60 transition-colors duration-300"
+            >
+              Produzida com 💚 por CAMALY
+            </a>
+          </div>
         </div>
       </div>
     </footer>

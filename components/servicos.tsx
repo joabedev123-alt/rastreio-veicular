@@ -13,7 +13,7 @@ const servicos = [
     title: "Rastreamento Veicular",
     desc: "Localização em tempo real e monitoramento 24h para seu veículo.",
     features: ["GPS em tempo real", "Histórico de rotas", "App mobile", "Alertas de rota"],
-    image: "/rastreamento.jpeg",
+    image: "/rastreio.jpeg",
     delay: 0,
   },
   {
@@ -47,7 +47,7 @@ const servicos = [
     title: "Frotista",
     desc: "Controle, gestão e acompanhamento completo para sua frota.",
     features: ["Gestão inteligente", "Monitoramento em lote", "Relatórios gerenciais", "Otimização de custos"],
-    image: "/rastreio8.jpeg",
+    image: "/frotista.jpeg",
     delay: 0.6,
   },
   {

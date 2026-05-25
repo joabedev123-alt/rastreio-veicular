@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Shield, CheckCircle, AlertTriangle, Star } from "lucide-react";
+import { Shield, AlertTriangle, Star } from "lucide-react";
 
 const WA_LINK = "https://wa.me/5586988615309";
 
@@ -106,7 +106,7 @@ export function Garantia() {
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="relative flex-shrink-0"
               >
-                <div className="w-36 h-36 relative flex items-center justify-center">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 relative flex items-center justify-center">
                   {/* Outer ring */}
                   <div className="absolute inset-0 rounded-full border-2 border-[#00FF88]/30 border-dashed" />
                   {/* Inner ring */}
@@ -143,14 +143,24 @@ export function Garantia() {
                   ))}
                 </div>
                 <h3
-                  className="text-xl sm:text-3xl lg:text-4xl font-black text-[#EDEDED] leading-tight mb-6"
+                  className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#EDEDED] leading-tight mb-4"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
+                  PROTEJA SEU VEÍCULO AGORA.{" "}
+                  <span className="gradient-text-green">
+                    SE NÃO LOCALIZARMOS SEU BEM EM ATÉ 90 DIAS,
+                  </span>{" "}
+                  VOCÊ RECEBE{" "}
+                  <span className="text-[#00FF88] text-glow">
+                    100% DO VALOR DA TABELA FIPE
+                  </span>
+                </h3>
+                <p className="text-[#EDEDED]/50 text-sm sm:text-base leading-relaxed mb-6">
                   Confiamos tanto na nossa tecnologia que colocamos seu
                   patrimônio em garantia. Indenização de até{" "}
-                  <span className="text-[#00FF88] text-glow">R$ 20.000,00</span>{" "}
+                  <span className="text-[#00FF88] font-semibold">R$ 20.000,00</span>{" "}
                   conforme a Tabela FIPE vigente.
-                </h3>
+                </p>
               </div>
             </div>
 

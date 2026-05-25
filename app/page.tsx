@@ -6,6 +6,7 @@ import { Servicos } from "@/components/servicos";
 import { Cobertura } from "@/components/cobertura";
 import { Faq } from "@/components/faq";
 import { CtaFinal } from "@/components/cta-final";
+import { Depoimentos } from "@/components/depoimentos";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { LoadingScreen } from "@/components/loading-screen";
@@ -23,6 +24,7 @@ export default function Home() {
         <Cobertura />
         <Faq />
         <CtaFinal />
+        <Depoimentos />
       </main>
       <Footer />
       <WhatsAppButton />
