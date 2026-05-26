@@ -6,6 +6,7 @@ import { Servicos } from "@/components/servicos";
 import { Cobertura } from "@/components/cobertura";
 import { Faq } from "@/components/faq";
 import { CtaFinal } from "@/components/cta-final";
+import { Planos } from "@/components/planos";
 import { Depoimentos } from "@/components/depoimentos";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
@@ -21,6 +22,7 @@ export default function Home() {
         <Diferenciais />
         <Garantia />
         <Servicos />
+        <Planos />
         <Cobertura />
         <Faq />
         <CtaFinal />

@@ -128,7 +128,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-14 sm:pb-20 w-full">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
           {/* Left column */}
           <div className="flex-1 max-w-2xl">
             <motion.div
@@ -163,7 +163,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-[#EDEDED]/60 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl"
+              className="text-[#EDEDED]/60 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
               Localização em tempo real, monitoramento contínuo e{" "}
@@ -301,23 +301,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-[#EDEDED]/30 text-xs tracking-[0.2em]">
-          SCROLL
-        </span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <ChevronDown className="text-[#00FF88]/50" size={20} />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

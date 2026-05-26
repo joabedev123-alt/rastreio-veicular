@@ -11,7 +11,7 @@ export function CtaFinal() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden bg-[#050505]">
+    <section className="relative py-10 sm:py-14 px-4 sm:px-6 overflow-hidden bg-[#050505]">
       {/* Background radial */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -62,7 +62,7 @@ export function CtaFinal() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[#00FF88]/25 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[#00FF88]/25 mb-6"
         >
           <Shield className="text-[#00FF88]" size={14} strokeWidth={2} />
           <span
@@ -78,7 +78,7 @@ export function CtaFinal() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-4xl sm:text-6xl lg:text-9xl font-black leading-none mb-6"
+          className="text-3xl sm:text-5xl lg:text-7xl font-black leading-none mb-4"
           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
         >
           <span className="block text-[#EDEDED]">SEU PATRIMÔNIO</span>
@@ -92,7 +92,7 @@ export function CtaFinal() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-[#EDEDED]/60 text-lg sm:text-xl leading-relaxed mb-12 max-w-2xl mx-auto"
+          className="text-[#EDEDED]/60 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto"
         >
           Proteção inteligente para quem{" "}
           <span className="text-[#00FF88]">não pode correr riscos.</span>{" "}
@@ -105,13 +105,13 @@ export function CtaFinal() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.45 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
         >
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-cta flex items-center gap-3 px-10 py-5 rounded-2xl text-lg font-black cursor-pointer glow-green-strong pulse-green"
+            className="btn-cta flex items-center gap-3 px-7 py-3.5 rounded-2xl text-base font-black cursor-pointer glow-green-strong pulse-green"
           >
             <svg
               viewBox="0 0 24 24"
@@ -125,7 +125,7 @@ export function CtaFinal() {
           </a>
           <a
             href={`tel:+5586988615309`}
-            className="flex items-center gap-2 px-8 py-5 rounded-2xl text-base font-semibold border border-[#00FF88]/30 text-[#00FF88] hover:border-[#00FF88]/60 hover:bg-[#00FF88]/5 transition-all duration-300 cursor-pointer"
+            className="flex items-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold border border-[#00FF88]/30 text-[#00FF88] hover:border-[#00FF88]/60 hover:bg-[#00FF88]/5 transition-all duration-300 cursor-pointer"
           >
             <Phone size={18} strokeWidth={1.5} />
             Ligar Agora
@@ -137,7 +137,7 @@ export function CtaFinal() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-12 border-t border-[#00FF88]/10"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-[#00FF88]/10"
         >
           {[
             { value: "98%", label: "Taxa de Recuperação" },
@@ -147,7 +147,7 @@ export function CtaFinal() {
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <p
-                className="text-[#00FF88] text-3xl font-black text-glow mb-1"
+                className="text-[#00FF88] text-2xl font-black text-glow mb-1"
                 style={{ fontFamily: "'Orbitron', sans-serif" }}
               >
                 {stat.value}
